@@ -82,3 +82,70 @@ def estimate_fundamental_matrix(Points_a, Points_b):
     # create data matrix
     data_matrix = np.array([u_prime * u, u_prime * v, u_prime,
                             v_prime * u, v_prime * v, v_prime,
+                            u, v, np.ones((n))])
+    data_matrix = np.transpose(data_matrix)
+
+    # Get system matrix using svd
+    U, S, Vh = np.linalg.svd(data_matrix)
+
+    # Get column of V coresp to the smallest singular value for full rank F
+    # Note: np.linalg.svd returns the transpose of V (Vh), so we take the last row instead of the last column
+    # Vh is sorted in descending order of the size of the eigenvalues
+    # indx = np.argmin(S)
+    # full_F = Vh[indx,:]
+    full_F = Vh[-1, :]
+
+    # Reshape column to 3x3 so we have the right dimension for F
+    full_F = np.reshape(full_F, (3, 3))
+    # print(np.linalg.matrix_rank(full_F))
+
+    # Reduce rank to get final F
+    # Note: np.linalg.svd returns the transpose of V (Vh), so we don't have to transpose it here.
+    # for the matrix multiplication to produce F_matrix
+    U, S, Vh = np.linalg.svd(full_F)
+    # S is sorted in descending order of the size of the eigenvalues
+    # indx = np.argmin(S)
+    # S[indx] = 0
+    S[-1] = 0
+    F_matrix = U @ np.diagflat(S) @ Vh
+    # print(np.linalg.matrix_rank(F_matrix))
+
+    # Adjust back to original coordinates
+    F_matrix = np.transpose(T_b) @ F_matrix @ T_a
+    return F_matrix
+
+
+def evaluate_correspondence(img_A, img_B, ground_truth_correspondence_file,
+                            scale_factor, x1_est, y1_est, x2_est, y2_est, matches, confidences, vis,
+                            filename="notre_dame_matches.jpg"):
+    # 'unscale' interest points to compare with ground truth points
+    x1_est_scaled = x1_est / scale_factor
+    y1_est_scaled = y1_est / scale_factor
+    x2_est_scaled = x2_est / scale_factor
+    y2_est_scaled = y2_est / scale_factor
+
+    conf_indices = np.argsort(-confidences, kind='mergesort')
+    matches = matches[conf_indices, :]
+    confidences = confidences[conf_indices]
+
+    # we want to see how good our matches are, extract the coordinates of each matched
+    # point
+
+    x1_matches = np.zeros(matches.shape[0])
+    y1_matches = np.zeros(matches.shape[0])
+    x2_matches = np.zeros(matches.shape[0])
+    y2_matches = np.zeros(matches.shape[0])
+
+    for i in range(matches.shape[0]):
+        x1_matches[i] = x1_est_scaled[int(matches[i, 0])]
+        y1_matches[i] = y1_est_scaled[int(matches[i, 0])]
+        x2_matches[i] = x2_est_scaled[int(matches[i, 1])]
+        y2_matches[i] = y2_est_scaled[int(matches[i, 1])]
+
+    good_matches = np.zeros((matches.shape[0]), dtype=np.bool)
+
+    # Loads `ground truth' positions x1, y1, x2, y2
+    file_contents = scio.loadmat(ground_truth_correspondence_file)
+
+    # x1, y1, x2, y2 = scio.loadmat(eval_file)
+    x1 = file_contents['x1']
