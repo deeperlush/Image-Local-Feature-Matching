@@ -6,4 +6,7 @@
 import argparse
 
 import matplotlib
-import matplotlib.pyplot as p
+import matplotlib.pyplot as plt
+import numpy as np
+
+from skimage import io, img
