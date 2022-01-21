@@ -9,4 +9,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-from skimage import io, img
+from skimage import io, img_as_float32
+from skimage.transform import rescale
+from skimage
