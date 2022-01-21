@@ -11,4 +11,7 @@ import numpy as np
 
 from skimage import io, img_as_float32
 from skimage.transform import rescale
-from skimage
+from skimage.color import rgb2gray
+
+import student as student
+from hel
