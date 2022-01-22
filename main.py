@@ -14,4 +14,6 @@ from skimage.transform import rescale
 from skimage.color import rgb2gray
 
 import student as student
-from hel
+from helpers import evaluate_correspondence, cheat_interest_points
+
+mat
