@@ -20,4 +20,5 @@ matplotlib.use("TkAgg")
 
 
 # This script
-# (1) Loads and
+# (1) Loads and resizes images
+# (2) Finds interest points in those images      
