@@ -16,4 +16,8 @@ from skimage.color import rgb2gray
 import student as student
 from helpers import evaluate_correspondence, cheat_interest_points
 
-mat
+matplotlib.use("TkAgg")
+
+
+# This script
+# (1) Loads and
