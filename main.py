@@ -25,4 +25,6 @@ matplotlib.use("TkAgg")
 # (3) Describes each interest point with a local feature    (you code this)
 # (4) Finds matching features                               (you code this)
 # (5) Visualizes the matches
-# (6) Evaluates the matc
+# (6) Evaluates the matches based on ground truth correspondences
+
+def load_dat
