@@ -23,4 +23,6 @@ matplotlib.use("TkAgg")
 # (1) Loads and resizes images
 # (2) Finds interest points in those images                 (you code this)
 # (3) Describes each interest point with a local feature    (you code this)
-# (4) Finds matching features                               (you code
+# (4) Finds matching features                               (you code this)
+# (5) Visualizes the matches
+# (6) Evaluates the matc
