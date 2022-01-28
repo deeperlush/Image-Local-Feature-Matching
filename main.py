@@ -27,4 +27,7 @@ matplotlib.use("TkAgg")
 # (5) Visualizes the matches
 # (6) Evaluates the matches based on ground truth correspondences
 
-def load_dat
+def load_data(file_name):
+    """
+     1) Load stuff
+     There are numerous other i
