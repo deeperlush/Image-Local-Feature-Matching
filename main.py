@@ -31,4 +31,5 @@ def load_data(file_name):
     """
      1) Load stuff
      There are numerous other image sets in the supplementary data on the
-     project web page. 
+     project web page. You can simply download images off the Internet, as
+     well. Howeve
