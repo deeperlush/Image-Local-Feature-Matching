@@ -30,4 +30,5 @@ matplotlib.use("TkAgg")
 def load_data(file_name):
     """
      1) Load stuff
-     There are numerous other i
+     There are numerous other image sets in the supplementary data on the
+     project web page. 
