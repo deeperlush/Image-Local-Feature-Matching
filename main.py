@@ -33,4 +33,5 @@ def load_data(file_name):
      There are numerous other image sets in the supplementary data on the
      project web page. You can simply download images off the Internet, as
      well. However, the evaluation function at the bottom of this script will
-     only work for three particular image pairs (unless
+     only work for three particular image pairs (unless you add ground truth
+     annotations for other image pairs).
