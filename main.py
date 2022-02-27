@@ -34,4 +34,5 @@ def load_data(file_name):
      project web page. You can simply download images off the Internet, as
      well. However, the evaluation function at the bottom of this script will
      only work for three particular image pairs (unless you add ground truth
-     annotations for other image pairs).
+     annotations for other image pairs). It is suggested that you only work
+     with the two Notre Dame ima
