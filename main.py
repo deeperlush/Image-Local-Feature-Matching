@@ -35,4 +35,5 @@ def load_data(file_name):
      well. However, the evaluation function at the bottom of this script will
      only work for three particular image pairs (unless you add ground truth
      annotations for other image pairs). It is suggested that you only work
-     with the two Notre Dame ima
+     with the two Notre Dame images until you are satisfied with your
+     implementation and ready to
