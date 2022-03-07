@@ -37,4 +37,5 @@ def load_data(file_name):
      annotations for other image pairs). It is suggested that you only work
      with the two Notre Dame images until you are satisfied with your
      implementation and ready to test on additional images. A single scale
-     pipeline works fine 
+     pipeline works fine for these two images (and will give you full credit
+     f
