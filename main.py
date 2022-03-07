@@ -38,4 +38,7 @@ def load_data(file_name):
      with the two Notre Dame images until you are satisfied with your
      implementation and ready to test on additional images. A single scale
      pipeline works fine for these two images (and will give you full credit
-     for this project), but you will need local features at multiple scal
+     for this project), but you will need local features at multiple scales to
+     handle harder cases.
+
+     If you want to add new images t
