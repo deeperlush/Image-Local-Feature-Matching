@@ -41,4 +41,5 @@ def load_data(file_name):
      for this project), but you will need local features at multiple scales to
      handle harder cases.
 
-     If you want to add new images t
+     If you want to add new images to test, create a new elif of the same format as those
+     for
