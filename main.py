@@ -42,4 +42,5 @@ def load_data(file_name):
      handle harder cases.
 
      If you want to add new images to test, create a new elif of the same format as those
-     for notre_dame, mt_rushmore, etc. You do not need to set the eval
+     for notre_dame, mt_rushmore, etc. You do not need to set the eval_file variable unless
+     you hand create a ground trut
