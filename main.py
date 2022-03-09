@@ -43,4 +43,5 @@ def load_data(file_name):
 
      If you want to add new images to test, create a new elif of the same format as those
      for notre_dame, mt_rushmore, etc. You do not need to set the eval_file variable unless
-     you hand create a ground trut
+     you hand create a ground truth annotations. To run with your new images use
+     python main.py -p <you
