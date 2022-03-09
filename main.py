@@ -46,4 +46,6 @@ def load_data(file_name):
      you hand create a ground truth annotations. To run with your new images use
      python main.py -p <your file name>.
 
-    :param file_name: string for which image pai
+    :param file_name: string for which image pair to compute correspondence for
+
+        The first three strings c
