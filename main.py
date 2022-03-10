@@ -54,3 +54,6 @@ def load_data(file_name):
         1. notre_dame
         2. mt_rushmore
         3. e_gaudi
+
+    :return: a tuple of the format (image1, image2, eval file)
+    """
