@@ -51,3 +51,6 @@ def load_data(file_name):
         The first three strings can be used as shortcuts to the
         data files we give you
 
+        1. notre_dame
+        2. mt_rushmore
+        3. e_gaudi
