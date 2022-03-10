@@ -48,4 +48,6 @@ def load_data(file_name):
 
     :param file_name: string for which image pair to compute correspondence for
 
-        The first three strings c
+        The first three strings can be used as shortcuts to the
+        data files we give you
+
