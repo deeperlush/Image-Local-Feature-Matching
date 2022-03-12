@@ -57,3 +57,5 @@ def load_data(file_name):
 
     :return: a tuple of the format (image1, image2, eval file)
     """
+
+    # Note: these files default to notre dame, unless ot
