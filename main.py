@@ -64,4 +64,6 @@ def load_data(file_name):
 
     eval_file = "../data/NotreDame/NotreDameEval.mat"
 
-    if file_name == "not
+    if file_name == "notre_dame":
+        pass
+    elif file_name == "mt_rushmor
