@@ -59,4 +59,7 @@ def load_data(file_name):
     """
 
     # Note: these files default to notre dame, unless otherwise specified
-    image1_file = "../data/NotreDame/No
+    image1_file = "../data/NotreDame/NotreDame1.jpg"
+    image2_file = "../data/NotreDame/NotreDame2.jpg"
+
+    
