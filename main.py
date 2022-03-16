@@ -62,4 +62,6 @@ def load_data(file_name):
     image1_file = "../data/NotreDame/NotreDame1.jpg"
     image2_file = "../data/NotreDame/NotreDame2.jpg"
 
-    
+    eval_file = "../data/NotreDame/NotreDameEval.mat"
+
+    if file_name == "not
