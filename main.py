@@ -66,4 +66,5 @@ def load_data(file_name):
 
     if file_name == "notre_dame":
         pass
-    elif file_name == "mt_rushmor
+    elif file_name == "mt_rushmore":
+        image1_file = "../data/MountRushmore/Mount_Rushmo
