@@ -71,3 +71,5 @@ def load_data(file_name):
         image2_file = "../data/MountRushmore/Mount_Rushmore2.jpg"
         eval_file = "../data/MountRushmore/MountRushmoreEval.mat"
     elif file_name == "e_gaudi":
+        image1_file = "../data/EpiscopalGaudi/EGaudi_1.jpg"
+       
