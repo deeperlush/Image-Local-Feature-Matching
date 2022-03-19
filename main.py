@@ -68,4 +68,5 @@ def load_data(file_name):
         pass
     elif file_name == "mt_rushmore":
         image1_file = "../data/MountRushmore/Mount_Rushmore1.jpg"
-        image2_file = "../data/MountRushmore/
+        image2_file = "../data/MountRushmore/Mount_Rushmore2.jpg"
+        eval_file = "../data/MountRush
