@@ -75,4 +75,7 @@ def load_data(file_name):
         image2_file = "../data/EpiscopalGaudi/EGaudi_2.jpg"
         eval_file = "../data/EpiscopalGaudi/EGaudiEval.mat"
 
-    image1 = img_as_float32(i
+    image1 = img_as_float32(io.imread(image1_file))
+    image2 = img_as_float32(io.imread(image2_file))
+
+ 
