@@ -73,4 +73,6 @@ def load_data(file_name):
     elif file_name == "e_gaudi":
         image1_file = "../data/EpiscopalGaudi/EGaudi_1.jpg"
         image2_file = "../data/EpiscopalGaudi/EGaudi_2.jpg"
-        eval_
+        eval_file = "../data/EpiscopalGaudi/EGaudiEval.mat"
+
+    image1 = img_as_float32(i
