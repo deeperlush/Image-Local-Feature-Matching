@@ -85,4 +85,6 @@ def main():
     """
     Reads in the data,
 
-    Command line usage: python main.py -p | --pair <image pai
+    Command line usage: python main.py -p | --pair <image pair name>
+
+    -p | --pair - flag - required. specifies which i
