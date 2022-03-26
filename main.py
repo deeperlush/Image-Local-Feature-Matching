@@ -87,4 +87,9 @@ def main():
 
     Command line usage: python main.py -p | --pair <image pair name>
 
-    -p | --pair - flag - required. specifies which i
+    -p | --pair - flag - required. specifies which image pair to match
+
+    """
+
+    # create the command line parser
+    parser = argpa
