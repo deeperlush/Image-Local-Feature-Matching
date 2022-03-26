@@ -78,4 +78,9 @@ def load_data(file_name):
     image1 = img_as_float32(io.imread(image1_file))
     image2 = img_as_float32(io.imread(image2_file))
 
- 
+    return image1, image2, eval_file
+
+
+def main():
+    """
+    Reads i
