@@ -83,4 +83,6 @@ def load_data(file_name):
 
 def main():
     """
-    Reads i
+    Reads in the data,
+
+    Command line usage: python main.py -p | --pair <image pai
