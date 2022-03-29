@@ -94,4 +94,5 @@ def main():
     # create the command line parser
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-p", "--pair", required=True
+    parser.add_argument("-p", "--pair", required=True,
+                        help="Either notre_dame, mt_rushmore, or
