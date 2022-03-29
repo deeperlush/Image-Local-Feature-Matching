@@ -92,4 +92,6 @@ def main():
     """
 
     # create the command line parser
-    parser = argpa
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("-p", "--pair", required=True
