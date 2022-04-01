@@ -97,4 +97,7 @@ def main():
     parser.add_argument("-p", "--pair", required=True,
                         help="Either notre_dame, mt_rushmore, or e_gaudi. Specifies which image pair to match")
 
-    args = parser.parse
+    args = parser.parse_args()
+
+    # (1) Load in the data
+    image1_color, image2_color, eval_file = l
