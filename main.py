@@ -100,4 +100,6 @@ def main():
     args = parser.parse_args()
 
     # (1) Load in the data
-    image1_color, image2_color, eval_file = l
+    image1_color, image2_color, eval_file = load_data(args.pair)
+
+    # You don't have to work with gr
