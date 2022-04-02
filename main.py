@@ -102,4 +102,5 @@ def main():
     # (1) Load in the data
     image1_color, image2_color, eval_file = load_data(args.pair)
 
-    # You don't have to work with gr
+    # You don't have to work with grayscale images. Matching with color
+    # information might be helpful.
