@@ -104,4 +104,7 @@ def main():
 
     # You don't have to work with grayscale images. Matching with color
     # information might be helpful. If you choose to work with RGB images, just
-    # co
+    # comment these two lines
+
+    image1 = rgb2gray(image1_color)
+    #
