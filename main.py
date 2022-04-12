@@ -107,4 +107,5 @@ def main():
     # comment these two lines
 
     image1 = rgb2gray(image1_color)
-    # Our own rgb2gray coefficients which match Rec.ITU-R BT.601-7 (N
+    # Our own rgb2gray coefficients which match Rec.ITU-R BT.601-7 (NTSC) luminance conversion - only mino
+    # performance improve
