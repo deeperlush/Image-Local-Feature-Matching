@@ -111,4 +111,4 @@ def main():
     # performance improvements and could be confusing to students image1 = image1[:,:,0] * 0.2989 + image1[:,:,
     # 1] * 0.5870 + image1[:,:,2] * 0.1140
     image2 = rgb2gray(image2_color)
-    # image2 
+    # image2 = image2[:,:,0] * 0.2989 + image2[:,:,1] * 0.5870 + image2[:,:,2
