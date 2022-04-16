@@ -113,4 +113,5 @@ def main():
     image2 = rgb2gray(image2_color)
     # image2 = image2[:,:,0] * 0.2989 + image2[:,:,1] * 0.5870 + image2[:,:,2] * 0.1140
 
-    # make images smaller to speed up the algorith
+    # make images smaller to speed up the algorithm. This parameter
+    # gets passed into the evaluation
