@@ -115,4 +115,5 @@ def main():
 
     # make images smaller to speed up the algorithm. This parameter
     # gets passed into the evaluation code, so don't resize the images
-    # except for changing this parameter 
+    # except for changing this parameter - We will evaluate your code using
+    # scale_factor = 0.5, so be aware of 
