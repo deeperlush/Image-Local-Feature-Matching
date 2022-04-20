@@ -124,4 +124,6 @@ def main():
     image2 = np.float32(rescale(image2, scale_factor))
 
     # width and height of each local feature, in pixels
-    feature_wi
+    feature_width = 16
+
+    # (2) Find distinctive points in each image. See
