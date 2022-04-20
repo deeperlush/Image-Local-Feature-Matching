@@ -121,3 +121,6 @@ def main():
 
     # Bilinear rescaling
     image1 = np.float32(rescale(image1, scale_factor))
+    image2 = np.float32(rescale(image2, scale_factor))
+
+    # 
