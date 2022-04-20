@@ -120,4 +120,4 @@ def main():
     scale_factor = 0.5
 
     # Bilinear rescaling
- 
+    image1 = np.float32(rescale(image1, scale_factor))
