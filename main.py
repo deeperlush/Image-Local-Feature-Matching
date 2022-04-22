@@ -126,4 +126,5 @@ def main():
     # width and height of each local feature, in pixels
     feature_width = 16
 
-    # (2) Find distinctive points in each image. See
+    # (2) Find distinctive points in each image. See Szeliski 4.1.1
+    # !!! You will need to implement get_interest
