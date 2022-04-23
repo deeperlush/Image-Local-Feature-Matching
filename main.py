@@ -131,4 +131,5 @@ def main():
 
     print("Getting interest points...")
 
-    (x1,
+    (x1, y1) = student.get_interest_points(image1, feature_width)
+    (x2, y2) = st
