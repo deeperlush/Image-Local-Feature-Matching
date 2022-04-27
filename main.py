@@ -134,4 +134,5 @@ def main():
     (x1, y1) = student.get_interest_points(image1, feature_width)
     (x2, y2) = student.get_interest_points(image2, feature_width)
 
-    # For development and debugging get_features and match_features, you 
+    # For development and debugging get_features and match_features, you will likely
+    # want to use the ta ground truth points, you can comment 
