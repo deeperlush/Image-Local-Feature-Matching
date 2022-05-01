@@ -137,4 +137,5 @@ def main():
     # For development and debugging get_features and match_features, you will likely
     # want to use the ta ground truth points, you can comment out the preceding two
     # lines and uncomment the following line to do this. Note that the ground truth
-    # points 
+    # points for mt. rushmore will not produce good results, so you'll have to use
+    
