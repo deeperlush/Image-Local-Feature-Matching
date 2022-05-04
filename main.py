@@ -142,4 +142,6 @@ def main():
 
     # (x1, y1, x2, y2) = cheat_interest_points(eval_file, scale_factor)
 
-    # if you want 
+    # if you want to view your corners uncomment these next lines!
+
+    # plt.imshow(image1, cmap="gray"
