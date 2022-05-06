@@ -148,4 +148,5 @@ def main():
     # plt.scatter(x1, y1, alpha=0.9, s=3)
     # plt.show()
 
-    
+    # plt.imshow(image2, cmap="gray")
+    # plt.scatter(x2, y2, alpha=
