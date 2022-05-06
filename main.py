@@ -154,4 +154,5 @@ def main():
 
     print("Done!")
 
-    # 3)
+    # 3) Create feature vectors at each interest point. Szeliski 4.1.2
+ 
