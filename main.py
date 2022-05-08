@@ -157,4 +157,6 @@ def main():
     # 3) Create feature vectors at each interest point. Szeliski 4.1.2
     # !!! You will need to implement get_features. !!!
 
-    print("Gett
+    print("Getting features...")
+
+    image1_features = student.get_features(imag
