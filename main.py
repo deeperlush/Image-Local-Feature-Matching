@@ -159,4 +159,5 @@ def main():
 
     print("Getting features...")
 
-    image1_features = student.get_features(imag
+    image1_features = student.get_features(image1, x1, y1, feature_width)
+    image2_features = stud
