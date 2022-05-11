@@ -160,4 +160,6 @@ def main():
     print("Getting features...")
 
     image1_features = student.get_features(image1, x1, y1, feature_width)
-    image2_features = stud
+    image2_features = student.get_features(image2, x2, y2, feature_width)
+
+    print("Done!"
