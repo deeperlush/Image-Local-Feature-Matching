@@ -175,4 +175,5 @@ def main():
 
     # 5) Evaluation and visualization
 
-    # The last thing to do is to check h
+    # The last thing to do is to check how your code performs on the image pairs
+    # we've provided. The evaluate_corresponde
