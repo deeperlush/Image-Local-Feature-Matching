@@ -167,4 +167,6 @@ def main():
     # 4) Match features. Szeliski 4.1.3
     # !!! You will need to implement match_features !!!
 
-    print("
+    print("Matching features...")
+
+    matches, confidences = student.match_featur
