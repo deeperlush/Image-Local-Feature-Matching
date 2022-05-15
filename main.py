@@ -169,4 +169,8 @@ def main():
 
     print("Matching features...")
 
-    matches, confidences = student.match_featur
+    matches, confidences = student.match_features(image1_features, image2_features)
+
+    print("Done!")
+
+    # 5)
