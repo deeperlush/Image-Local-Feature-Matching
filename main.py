@@ -173,4 +173,6 @@ def main():
 
     print("Done!")
 
-    # 5)
+    # 5) Evaluation and visualization
+
+    # The last thing to do is to check h
