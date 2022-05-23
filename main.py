@@ -179,4 +179,5 @@ def main():
     # we've provided. The evaluate_correspondence function below will print out
     # the accuracy of your feature matching for your 50 most confident matches,
     # 100 most confident matches, and all your matches. It will then visualize
-    # the matches by drawing green lines between points for correct m
+    # the matches by drawing green lines between points for correct matches and
+    # red lines for incorrect matches. The visualizer wi
