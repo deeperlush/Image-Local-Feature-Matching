@@ -188,4 +188,5 @@ def main():
 
     num_pts_to_visualize = 50
 
-    evaluate_correspondence(image1_color
+    evaluate_correspondence(image1_color, image2_color, eval_file, scale_factor,
+                   
