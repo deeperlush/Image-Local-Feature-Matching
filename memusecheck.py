@@ -7,4 +7,5 @@ import student
 from helpers import evaluate_correspondence
 
 
-def mem
+def memfunc():
+    # Note: these files default to notre dame, unless otherwise s
