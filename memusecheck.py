@@ -14,4 +14,6 @@ def memfunc():
     eval_file = "../data/NotreDame/NotreDameEval.mat"
 
     scale_factor = 0.5
-    fea
+    feature_width = 16
+
+    image1 = img_as_float32(rescale(rgb2gray
