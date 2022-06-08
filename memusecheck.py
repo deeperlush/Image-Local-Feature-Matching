@@ -10,4 +10,5 @@ from helpers import evaluate_correspondence
 def memfunc():
     # Note: these files default to notre dame, unless otherwise specified
     image1_file = "../data/NotreDame/NotreDame1.jpg"
-    image2_
+    image2_file = "../data/NotreDame/NotreDame2.jpg"
+    eval_file = "../dat
