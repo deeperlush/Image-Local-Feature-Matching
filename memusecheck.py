@@ -11,4 +11,7 @@ def memfunc():
     # Note: these files default to notre dame, unless otherwise specified
     image1_file = "../data/NotreDame/NotreDame1.jpg"
     image2_file = "../data/NotreDame/NotreDame2.jpg"
-    eval_file = "../dat
+    eval_file = "../data/NotreDame/NotreDameEval.mat"
+
+    scale_factor = 0.5
+    fea
