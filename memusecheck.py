@@ -16,4 +16,5 @@ def memfunc():
     scale_factor = 0.5
     feature_width = 16
 
-    image1 = img_as_float32(rescale(rgb2gray
+    image1 = img_as_float32(rescale(rgb2gray(io.imread(image1_file)), scale_factor))
+    image2 = img_as_floa
