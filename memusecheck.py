@@ -19,4 +19,4 @@ def memfunc():
     image1 = img_as_float32(rescale(rgb2gray(io.imread(image1_file)), scale_factor))
     image2 = img_as_float32(rescale(rgb2gray(io.imread(image2_file)), scale_factor))
 
-   
+    (x1, y1) = student.get_interest_points(image1, feature_w
