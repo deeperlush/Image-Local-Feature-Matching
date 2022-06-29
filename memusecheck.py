@@ -25,4 +25,6 @@ def memfunc():
     image1_features = student.get_features(image1, x1, y1, feature_width)
     image2_features = student.get_features(image2, x2, y2, feature_width)
 
-    matches, confidences = student.match_features(image1_features
+    matches, confidences = student.match_features(image1_features, image2_features)
+
+    evaluate_correspondence(image1, image2, e
