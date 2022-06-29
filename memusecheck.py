@@ -23,4 +23,6 @@ def memfunc():
     (x2, y2) = student.get_interest_points(image2, feature_width)
 
     image1_features = student.get_features(image1, x1, y1, feature_width)
-    image2_features = student.get_features(image2, x2, y2, featu
+    image2_features = student.get_features(image2, x2, y2, feature_width)
+
+    matches, confidences = student.match_features(image1_features
