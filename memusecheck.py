@@ -28,4 +28,8 @@ def memfunc():
     matches, confidences = student.match_features(image1_features, image2_features)
 
     evaluate_correspondence(image1, image2, eval_file, scale_factor,
-                            x1, y1, x2, y2,
+                            x1, y1, x2, y2, matches, confidences, 0)
+
+
+if __name__ == "__main__":
+    memuse = max(me
