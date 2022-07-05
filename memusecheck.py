@@ -32,4 +32,5 @@ def memfunc():
 
 
 if __name__ == "__main__":
-    memuse = max(me
+    memuse = max(memory_profiler.memory_usage(proc=memfunc))
+    print(
