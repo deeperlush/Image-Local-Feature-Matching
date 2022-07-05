@@ -33,4 +33,4 @@ def memfunc():
 
 if __name__ == "__main__":
     memuse = max(memory_profiler.memory_usage(proc=memfunc))
-    print(
+    print("Your program memory use: " + str(memuse) + " MiB")
