@@ -139,3 +139,59 @@ def get_features(image, xs, ys, feature_width):
 
     :params:
     :image: a grayscale or color image (your choice depending on your implementation)
+    :x: np array of x coordinates of interest points
+    :y: np array of y coordinates of interest points
+    :feature_width: in pixels, is the local feature width. You can assume
+                    that feature_width will be a multiple of 4 (i.e. every cell of your
+                    local SIFT-like feature will have an integer width and height).
+    If you want to detect and describe features at multiple scales or
+    particular orientations you can add input arguments.
+
+    :returns:
+    :features: np array of computed features. It should be of size
+            [len(x) * feature dimensionality] (for standard SIFT feature
+            dimensionality is 128)
+
+    """
+    # Convert to integers for indexing 
+    xs = np.round(xs).astype(int)
+    ys = np.round(ys).astype(int)
+
+    # Define helper functions for readabilty and avoid copy-pasting
+    def get_window(y, x):
+        """
+         Helper to get indices of the feature_width square
+        """
+        rows = (x - (feature_width/2 -1), x + feature_width/2)
+        if rows[0] < 0:
+            rows = (0, rows[1] - rows[0])
+        if rows[1] >= image.shape[0]:
+            rows = (rows[0]  + (image.shape[0] -1 - rows[1]), image.shape[0] - 1)
+        cols = (y - (feature_width/2 -1), y + feature_width/2)
+        if cols[0] < 0:
+            cols = (0, cols[1] - cols[0])
+        if cols[1] >= image.shape[1]:
+            cols = (cols[0]  - (cols[1] + 1 - image.shape[1]), image.shape[1] - 1)
+        return int(rows[0]), int(rows[1]) + 1, int(cols[0]), int(cols[1]) + 1
+
+    def get_current_window(i, j, matrix):
+        """
+        Helper to get sub square of size feature_width/4 
+        From the square matrix of size feature_width
+        """
+        return matrix[int(i*feature_width/4):
+                    int((i+1)*feature_width/4),
+                    int(j*feature_width/4):
+                    int((j+1)*feature_width/4)]
+
+    def rotate_by_dominant_angle(angles, grads):
+        hist, bin_edges = np.histogram(angles, bins= 36, range=(0, 2*np.pi), weights=grads)
+        angles -= bin_edges[np.argmax(hist)]
+        angles[ angles < 0 ] += 2 * np.pi
+    
+    # Initialize features tensor, with an easily indexable shape
+    features = np.zeros((len(xs), 4, 4, 8))
+    # Get gradients and angles by filters (approximation)
+    sigma = 0.8
+    filtered_image = gaussian(image, sigma)
+    dx = scharr_v(filtered_image)
