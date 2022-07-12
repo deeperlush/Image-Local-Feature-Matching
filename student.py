@@ -85,3 +85,57 @@ def get_interest_points(image, feature_width):
             detH = (Sxx * Syy) - (Sxy**2)
             traceH = Sxx + Syy
             R = detH - a*(traceH**2)
+            #If corner response is over threshold, it is a corner
+            if R > threshold:
+                xs.append(x + int(feature_width/2 -1))
+                ys.append(y + int(feature_width/2 -1))
+    return np.asarray(xs), np.asarray(ys)
+
+
+def get_features(image, xs, ys, feature_width):
+    """
+    Returns feature descriptors for a given set of interest points.
+
+    To start with, you might want to simply use normalized patches as your
+    local feature. This is very simple to code and works OK. However, to get
+    full credit you will need to implement the more effective SIFT-like descriptor
+    (See Szeliski 4.1.2 or the original publications at
+    http://www.cs.ubc.ca/~lowe/keypoints/)
+
+    Your implementation does not need to exactly match the SIFT reference.
+    Here are the key properties your (baseline) descriptor should have:
+    (1) a 4x4 grid of cells, each feature_width / 4 pixels square.
+    (2) each cell should have a histogram of the local distribution of
+        gradients in 8 orientations. Appending these histograms together will
+        give you 4x4 x 8 = 128 dimensions.
+    (3) Each feature should be normalized to unit length
+
+    You do not need to perform the interpolation in which each gradient
+    measurement contributes to multiple orientation bins in multiple cells
+    As described in Szeliski, a single gradient measurement creates a
+    weighted contribution to the 4 nearest cells and the 2 nearest
+    orientation bins within each cell, for 8 total contributions. This type
+    of interpolation probably will help, though.
+
+    You do not have to explicitly compute the gradient orientation at each
+    pixel (although you are free to do so). You can instead filter with
+    oriented filters (e.g. a filter that responds to edges with a specific
+    orientation). All of your SIFT-like feature can be constructed entirely
+    from filtering fairly quickly in this way.
+
+    You do not need to do the normalize -> threshold -> normalize again
+    operation as detailed in Szeliski and the SIFT paper. It can help, though.
+
+    Another simple trick which can help is to raise each element of the final
+    feature vector to some power that is less than one.
+
+    Useful functions: A working solution does not require the use of all of these
+    functions, but depending on your implementation, you may find some useful. Please
+    reference the documentation for each function/library and feel free to come to hours
+    or post on Piazza with any questions
+
+        - skimage.filters (library)
+
+
+    :params:
+    :image: a grayscale or color image (your choice depending on your implementation)
