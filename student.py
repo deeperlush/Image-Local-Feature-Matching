@@ -195,3 +195,63 @@ def get_features(image, xs, ys, feature_width):
     sigma = 0.8
     filtered_image = gaussian(image, sigma)
     dx = scharr_v(filtered_image)
+    dy = scharr_h(filtered_image)
+    gradient = np.sqrt(np.square(dx) + np.square(dy))
+    angles = np.arctan2(dy, dx)
+    angles[angles < 0 ] += 2*np.pi
+
+    for n, (x, y) in enumerate(zip(xs, ys)):
+        # Feature square 
+        i1, i2, j1, j2 = get_window(x, y)
+        grad_window = gradient[i1:i2, j1:j2]
+        angle_window = angles[i1:i2, j1:j2]
+        # Loop over sub feature squares 
+        for i in range(int(feature_width/4)):
+            for j in range(int(feature_width/4)):
+                # Enhancement: a Gaussian fall-off function window
+                current_grad = get_current_window(i, j, grad_window).flatten()
+                current_angle = get_current_window(i, j, angle_window).flatten()
+                features[n, i, j] = np.histogram(current_angle, bins=8,
+                 range=(0, 2*np.pi), weights=current_grad)[0]
+                
+    features = features.reshape((len(xs), -1,))
+    dividend = np.linalg.norm(features, axis=1).reshape(-1, 1)
+    # Rare cases where the gradients are all zeros in the window
+    # Results in np.nan from division by zero.
+    dividend[dividend == 0 ] = 1
+    features = features / dividend
+    thresh = 0.25
+    features[ features >= thresh ] = thresh
+    features  = features ** 0.8
+    # features = features / features.sum(axis = 1).reshape(-1, 1)
+    return features
+
+
+def match_features(im1_features, im2_features):
+    """
+    Implements the Nearest Neighbor Distance Ratio Test to assign matches between interest points
+    in two images.
+
+    Please implement the "Nearest Neighbor Distance Ratio (NNDR) Test" ,
+    Equation 4.18 in Section 4.1.3 of Szeliski.
+
+    For extra credit you can implement spatial verification of matches.
+
+    Please assign a confidence, else the evaluation function will not work. Remember that
+    the NNDR test will return a number close to 1 for feature points with similar distances.
+    Think about how confidence relates to NNDR.
+
+    This function does not need to be symmetric (e.g., it can produce
+    different numbers of matches depending on the order of the arguments).
+
+    A match is between a feature in im1_features and a feature in im2_features. We can
+    represent this match as a the index of the feature in im1_features and the index
+    of the feature in im2_features
+
+    :params:
+    :im1_features: an np array of features returned from get_features() for interest points in image1
+    :im2_features: an np array of features returned from get_features() for interest points in image2
+
+    :returns:
+    :matches: an np array of dimension k x 2 where k is the number of matches. The first
+            column is an index into im1_features and the second column is an index into im2_features
