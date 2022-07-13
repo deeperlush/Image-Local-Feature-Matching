@@ -5,4 +5,4 @@ import numpy as np
 from skimage.feature import plot_matches
 
 
-def
+def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, n
