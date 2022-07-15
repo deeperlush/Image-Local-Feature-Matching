@@ -7,4 +7,7 @@ from skimage.feature import plot_matches
 
 def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, number_to_display, filename=None):
 	"""
-		Visualizes corresponding point
+		Visualizes corresponding points between two images, either as
+		arrows or dots
+
+		mode='dots
