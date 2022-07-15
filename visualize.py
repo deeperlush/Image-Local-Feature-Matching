@@ -10,4 +10,5 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 		Visualizes corresponding points between two images, either as
 		arrows or dots
 
-		mode='dots
+		mode='dots': Corresponding points will have the same random color
+		mode='ar
