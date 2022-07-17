@@ -18,4 +18,6 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 
 	# generates unique figures so students can
 	# look at all three at once
-	fig, ax = plt.su
+	fig, ax = plt.subplots(nrows=1, ncols=1)
+
+	matches = matches[0:n
