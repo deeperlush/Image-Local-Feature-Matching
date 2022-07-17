@@ -13,4 +13,7 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 		mode='dots': Corresponding points will have the same random color
 		mode='arrows': Corresponding points will be joined by a line
 
-		Writes out a png
+		Writes out a png of the visualization if 'filename' is not None.
+	"""
+
+	# generates uniqu
