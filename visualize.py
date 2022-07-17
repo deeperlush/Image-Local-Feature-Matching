@@ -16,4 +16,6 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 		Writes out a png of the visualization if 'filename' is not None.
 	"""
 
-	# generates uniqu
+	# generates unique figures so students can
+	# look at all three at once
+	fig, ax = plt.su
