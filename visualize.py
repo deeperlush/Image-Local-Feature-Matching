@@ -20,4 +20,5 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 	# look at all three at once
 	fig, ax = plt.subplots(nrows=1, ncols=1)
 
-	matches = matches[0:n
+	matches = matches[0:number_to_display, :]
+	good_matches = good_matches[0:number_
