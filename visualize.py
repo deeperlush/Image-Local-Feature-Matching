@@ -21,4 +21,7 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 	fig, ax = plt.subplots(nrows=1, ncols=1)
 
 	matches = matches[0:number_to_display, :]
-	good_matches = good_matches[0:number_
+	good_matches = good_matches[0:number_to_display]
+
+	kp1 = zip_x_y(Y1, X1)
+	kp2 = zip_x_y(Y2, X2)
