@@ -34,4 +34,9 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 	if filename:
 		if not os.path.isdir('../results'):
 			os.mkdir('../results')
-		fig.savefig('..
+		fig.savefig('../results/' + filename)
+
+	plt.show()
+
+
+def zip_x_y(x, y):
