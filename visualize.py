@@ -43,4 +43,4 @@ def zip_x_y(x, y):
 	zipped_points = []
 	for i in range(len(x)):
 		zipped_points.append(np.array([x[i], y[i]]))
-	return np.array(zipped_point
+	return np.array(zipped_points)
