@@ -42,4 +42,5 @@ def show_correspondences(imgA, imgB, X1, Y1, X2, Y2, matches, good_matches, numb
 def zip_x_y(x, y):
 	zipped_points = []
 	for i in range(len(x)):
-		zipped_points.appe
+		zipped_points.append(np.array([x[i], y[i]]))
+	return np.array(zipped_point
