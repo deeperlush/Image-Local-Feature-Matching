@@ -12,4 +12,4 @@ Here's the outline what this project comprises of in `student.py`:
 ### Notre Dame
 ![](images/notre_dame_matches.jpg)
 <br />
-*Matches 
+*Matches after the complete pipeline execution on Notre Dame. Matches: 1113, Ac
