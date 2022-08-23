@@ -14,4 +14,7 @@ Here's the outline what this project comprises of in `student.py`:
 <br />
 *Matches after the complete pipeline execution on Notre Dame. Matches: 1113, Accuracy on 50 most confident ones: 100%, Accuracy on 100 most confident ones: 99%, and Accuracy on all the matches: 75%*
 
-### Mt Ru
+### Mt Rushmore
+![](images/mt_rushmore_matches.jpg)
+<br />
+*Matches after the full p
