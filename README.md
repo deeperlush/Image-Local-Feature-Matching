@@ -20,4 +20,6 @@ Here's the outline what this project comprises of in `student.py`:
 *Matches after the full pipeline run on Mount Rushmore. Matches: 55, Accuracy on 50 most confident: 94%, Accuracy on all the matches: 92%*
 
 ### E Gaudi
-![](images/e_gaudi_mat
+![](images/e_gaudi_matches.jpg)
+<br />
+*Matches Post-Whole pipeline execution on 
