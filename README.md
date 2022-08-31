@@ -22,4 +22,4 @@ Here's the outline what this project comprises of in `student.py`:
 ### E Gaudi
 ![](images/e_gaudi_matches.jpg)
 <br />
-*Matches Post-Whole pipeline execution on 
+*Matches Post-Whole pipeline execution on Epicopal Gaudi. Matches: 13, Accuracy on all the matches: 23
