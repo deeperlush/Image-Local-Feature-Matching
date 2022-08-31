@@ -17,4 +17,7 @@ Here's the outline what this project comprises of in `student.py`:
 ### Mt Rushmore
 ![](images/mt_rushmore_matches.jpg)
 <br />
-*Matches after the full pipeline run on Mount Rushmore. Matches: 55, Accuracy on 50 most confident: 94%, Accura
+*Matches after the full pipeline run on Mount Rushmore. Matches: 55, Accuracy on 50 most confident: 94%, Accuracy on all the matches: 92%*
+
+### E Gaudi
+![](images/e_gaudi_mat
